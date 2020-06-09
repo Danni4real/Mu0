@@ -12,4 +12,4 @@ Implement a hardware using software can be challenging, although try not to use 
 
 
 Usage:
-     ./Execute out.bin
+     ./Execute.py out.bin

@@ -1,5 +1,6 @@
 from Gates import *
 from Reg import *
+from Mem import *
 
 ir_en    = 0
 pc_en    = 0
@@ -85,6 +86,7 @@ def controler(f0, f1, f2):
     m = f_to_m(f0,f1,f2,current_state)
     if f0 == 1 and f1 == 1 and f2 == 1:
         print("program exit!")
+        dump_mem(32)
         exit(0)
     print("next_s ir_en pc_en acc_en m[1:0] x_sel y_sel a_sel r_en w_en")
     print(not_gate(current_state),"    ", ir_en, "   ",pc_en, "   ",acc_en, "    ",m[1],m[0], "  ",x_sel, "   ",y_sel, "   ",addr_sel, "   ",read_en, "   ",write_en)

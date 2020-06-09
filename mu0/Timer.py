@@ -6,9 +6,8 @@ HIGH_EDGE = 1
 
 def timer():
     t = 0
-    mu0_init()
     while True:
-        time.sleep(1)
+        #time.sleep(1)
         t = not_gate(t)
         if t == HIGH_EDGE:
             mu0_proceed()
